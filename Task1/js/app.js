@@ -8,14 +8,16 @@ let strongCounter = 0;
 
 for (let i = 0; i < zombiesData.length; i++) {
     if (zombiesData[i] !== undefined) {
+        let zombie = Number(zombiesData[i]);
+
         totalCounter++;
-        if (Number(zombiesData[i]) < 1 || isNaN(Number(zombiesData[i]))) {
+        if (zombie < 1 || isNaN(zombie)) {
             deadCounter++;
-        } else if (Number(zombiesData[i]) > 0 && Number(zombiesData[i]) < 11) {
+        } else if (zombie > 0 && zombie < 11) {
             smallCounter++;
-        } else if (Number(zombiesData[i]) > 10 && Number(zombiesData[i]) < 21) {
+        } else if (zombie > 10 && zombie < 21) {
             madCounter++;
-        } else if (Number(zombiesData[i]) > 20) {
+        } else if (zombie > 20) {
             strongCounter++;
         }
     }
