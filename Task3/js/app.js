@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 zombie = new ZombieStrong(zombies[counter]);
             }
 
-            zombie.on('create', () => {
+            zombie.on('dead', () => {
                 createZombie();
             });
 
